@@ -1,0 +1,34 @@
+@use "../../../styles.scss" as main;
+
+$icon-std: 2rem;
+$height-std: 88px;
+$padding-std: 24px;
+
+$height-min: 68px;
+$padding-min: 16px;
+
+
+
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: $height-std;
+  padding: $padding-std;
+  background-color: main.$medium-color;
+  width: 100vw;
+   @media (min-width: 2000px) and (orientation: landscape){
+      width: 2000px;
+  }
+  @media (max-width: 1044px) and (orientation: portrait) {
+      height: $height-min;
+      padding: $padding-min;
+  }
+  img{
+    height: $icon-std;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}

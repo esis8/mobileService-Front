@@ -1,0 +1,31 @@
+@use "../../../styles.scss" as main;
+
+div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h1{
+    margin: 40px 0;
+    padding: 10px 0;
+    font-size: 3rem;
+    font-weight: main.$font-weight-bold;
+    background: linear-gradient(270deg, main.$main-color 15.33%, main.$medium-color 101.88%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size:400% 400%;
+    -webkit-animation:change 4s ease infinite;
+    animation:change 4s ease infinite;
+    text-align: center;
+    width: 80%;
+    @media (max-width: 699px) {
+      font-size: 2rem;
+    }
+  }
+  button{
+    @include main.mainButton();
+
+  }
+
+}
+

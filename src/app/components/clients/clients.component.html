@@ -1,0 +1,44 @@
+
+
+<div *ngIf="setClientes">
+  <div *ngIf="clientes" class="clientes">
+    <h2>Lista de Clientes</h2>
+    <div *ngFor="let cliente of clientes" class="list">
+      <div class="datos">
+        <p>Cliente Número: {{ cliente.id}}</p>
+        <p>Nombre: {{ cliente.nombre }}</p>
+        <p>Apellido: {{ cliente.apellido }}</p>
+        <p>Documento: {{ cliente.documento }}</p>
+      </div>
+      <div class="detalle">
+        <p>Ver Telefonos</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="setTelefonos">
+  <div *ngIf="telefonos" class="telefonos">
+    <h2>Lista de Telefonos</h2>
+    <div *ngFor="let telefono of telefonos" class="list">
+      <div class="datos">
+        <p>Telefono Número: {{ telefono.id}}</p>
+        <p>Modelo: {{ telefono.modelo }}</p>
+        <p>Cliente Número: {{ telefono.id_cliente }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="setReparaciones">
+  <div *ngIf="reparaciones" class="reparaciones">
+    <h2>Lista de Reparaciones</h2>
+    <div *ngFor="let reparacion of reparaciones" class="list">
+      <div class="datos">
+        <p>Telefono Número: {{ reparacion.id_telefono}}</p>
+        <p>Estado: {{ reparacion.estado }}</p>
+        <p>Descripcion: {{ reparacion.descripcion }}</p>
+      </div>
+    </div>
+  </div>
+</div>

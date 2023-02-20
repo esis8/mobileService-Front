@@ -1,0 +1,31 @@
+<div class="login">
+
+    <h1>Login</h1>
+    <form method="post">
+      <input
+        type="email"
+        [(ngModel)]="email"
+        name="email"
+        placeholder="Email"
+        (blur)="validarInputEmail()"
+      />
+      <input
+        type="password"
+        [(ngModel)]="password"
+        name="password"
+        placeholder="Password"
+        (blur)="validarInputPassword()"
+      />
+      <div class="validaciones">
+        <p *ngIf="inputEmail">*Ingrese un mail válido.</p>
+        <p *ngIf="inputPassword">*La contraseña debe contener al menos una mayúscula, una minúscula, un número y un caracter especial. La contraseña debe contener entre 8 y 15 carácteres.</p>
+        <p *ngIf="inputValidar">*Email y/o contraseña ingresado es incorrecto.</p>
+      </div>
+      <button type="submit" (click)="login()"><div *ngIf="spin" class="spinner"></div>Login</button>
+    </form>
+
+    <div class="sesionLoading">
+
+    </div>
+
+</div>

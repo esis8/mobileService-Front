@@ -1,0 +1,19 @@
+<div class="services">
+
+
+  <div class="menu">
+
+    <p (click)="verClientes()">Ver Clientes</p>
+    <p (click)="verTelefonos()">Ver Telefonos</p>
+    <p (click)="verReparaciones()">Ver Reparaciones</p>
+
+
+
+  </div>
+  <div class="dashboard">
+    <div>
+      <app-clients [setClientes]="setClientes" [setTelefonos]="setTelefonos" [setReparaciones]="setReparaciones"></app-clients>
+    </div>
+  </div>
+</div>
+

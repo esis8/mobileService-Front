@@ -1,0 +1,96 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap');
+
+@mixin mainButton{
+  position: relative;
+  font-size: 1.25rem;
+  background-color: $dark-color;
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+  color: $light-color;
+  margin-top: 1rem;
+  &:hover{
+    background-color: $medium-color;
+    cursor: pointer;
+  }
+  @media (max-width: 699px) and (orientation: portrait) {
+    font-size: 1rem;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+  }
+}
+
+@mixin spinner {
+  border: 3px solid rgba(94, 131, 186, .5);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border-left-color: transparent;
+  animation: spin 1s linear infinite;
+  position: absolute;
+  bottom: 10px;
+  left: 25px;
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+
+$dark-color: #091d36;
+$main-color: #3a4e7a;
+$medium-color: #5e83ba;
+$secondary-color: #c2d2e9;
+$light-color: #f1f1f0;
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+:root{
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+  line-height: 1;
+  list-style: none;
+  color: $dark-color;
+}
+
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body{
+  background-color: $light-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+

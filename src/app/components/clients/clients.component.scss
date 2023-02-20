@@ -1,0 +1,62 @@
+@use "../../../styles.scss" as main;
+
+
+.clientes, .telefonos, .reparaciones{
+  width: 550px;
+  h2 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  }
+  .list{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 20px;
+    .datos{
+      width: 70%;
+      p{
+        line-height: 20px;
+      }
+    }
+    .detalle{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      width: 30%;
+      background-color: main.$main-color;
+      border-radius: 10px;
+      &:hover{
+        cursor: pointer;
+        background-color: main.$secondary-color;
+      }
+      p{
+        color: main.$light-color;
+        &:hover{
+          color: main.$dark-color;
+        }
+      }
+    }
+  }
+  @media (max-width: 1044px) {
+    margin-top: 40px;
+  }
+  @media (max-width: 699px){
+    width: 280px;
+    .list{
+      gap: 20px;
+      .datos{
+        width: 60%;
+      }
+      .detalle{
+        width: 40%;
+        p{
+          font-size: .8rem;
+        }
+      }
+    }
+  }
+}

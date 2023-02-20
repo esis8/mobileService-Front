@@ -1,0 +1,55 @@
+@use "../../../styles.scss" as main;
+
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 40px 0;
+  h1{
+    font-size: 3rem;
+    font-weight: main.$font-weight-bold;
+    background: linear-gradient(270deg, main.$main-color 15.33%, main.$medium-color 101.88%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size:400% 400%;
+    -webkit-animation:change 4s ease infinite;
+    animation:change 4s ease infinite;
+    text-align: center;
+    width: 80%;
+    @media (max-width: 699px) {
+      font-size: 2rem;
+    }
+  }
+  h2{
+    font-size: 1.5rem;
+    text-align: center;
+    width: 70%;
+    margin: 2rem 0;
+    font-weight: main.$font-weight-medium;
+    @media (max-width: 699px) {
+      font-size: 1rem;
+    }
+  }
+  img{
+    @media (max-width: 699px) {
+      width: 280px;
+    }
+  }
+  button{
+    @include main.mainButton();
+
+  }
+}
+
+@-webkit-keyframes change{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+@keyframes change{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
